@@ -1,0 +1,66 @@
+﻿@using System
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="json, ts, typescript, interface, definition, convert, generate">
+    <meta name="description" content="generate TypeScript interfaces from json">
+    <meta name="author" content="Timmy Kokke">
+    <title>json2ts - generate TypeScript interfaces from json</title>
+    <link href="~/Content/metro-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/site.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @RenderBody()
+    <div class="container">
+        <hr />
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - <a href="http://timmykokke.com">Timmy Kokke</a></p>
+            <p>based on <a href="http://jsonclassgenerator.codeplex.com/">JSON C# Class Generator</a></p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Scripts/knockout-3.2.0.js"></script>
+    <script src="~/Scripts/TimmyTools.js"></script>
+    <script src="~/Scripts/Default.js"></script>
+
+    <script>
+    UserVoice = window.UserVoice || []; (function () { var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true; uv.src = '//widget.uservoice.com/a7jEvWYG2qUzi3klDRyX6Q.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s) })();
+    UserVoice.push(['set', {accent_color: '#448dd6',trigger_color: 'white',trigger_background_color: '#448dd6'}]);
+    UserVoice.push(['identify', {
+        @*//email:      'john.doe@example.com', // User’s email address
+            //name:       'John Doe', // User’s real name
+            //created_at: 1364406966, // Unix timestamp for the date the user signed up
+            //id:         123, // Optional: Unique id of the user (if set, this should not change)
+            //type:       'Owner', // Optional: segment your users by type
+            //account: {
+            //  id:           123, // Optional: associate multiple users with a single account
+            //  name:         'Acme, Co.', // Account name
+            //  created_at:   1364406966, // Unix timestamp for the date the account was created
+            //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+            //  ltv:          1495.00, // Decimal; lifetime value of the account
+            //  plan:         'Enhanced' // Plan name for the account
+            //}*@
+    }]);
+    UserVoice.push(['addTrigger', '#feedback', { mode: 'smartvote' }]);
+    UserVoice.push(['autoprompt', {}]);
+    </script>
+    <script type="text/javascript">
+    var appInsights = window.appInsights || function (config) {
+        function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
+    }({
+        instrumentationKey: ""
+    });
+    window.appInsights = appInsights;
+    appInsights.trackPageView();
+    </script>
+</body>
+</html>
